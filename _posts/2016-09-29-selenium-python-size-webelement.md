@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selenium - Python : Get size of a WebElement
+title: [Python] Selenium : Get size of a WebElement
 ---
 
 For get the size from a WebElement ( element from now ), you just need to access through the variable class `size`:
