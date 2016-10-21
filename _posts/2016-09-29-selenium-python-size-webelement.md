@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Python - Selenium - How to get the size of a WebElement
+published: true
 ---
 
-For get the size from a WebElement ( element from now ), you just need to access through the variable class `size`:
+For get the size from a WebElement ( element from now ), you just need to access through the variable class `size` :
 
 ```
 >> element.size
@@ -45,10 +46,3 @@ Also you can get the value through css, but stay sharp, the value comes in the c
 ```
 
 In general, you can use the firsts two options, but the problem comes when Selenium (or the browser) doesn't compute the value (or is wrong), sometimes the value is lost in time and space and come with a value like `{'width': 0,'height': 0}`. In that escenario you can calculate distances with others elements, like asking for a father element size, etc, but this is for another post.
-
-
-
-
-
-
-
