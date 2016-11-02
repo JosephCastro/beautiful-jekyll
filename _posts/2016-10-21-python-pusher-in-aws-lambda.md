@@ -88,7 +88,22 @@ params = {
     'auth_version': '1.0'  # Para esta versión de la api
 }
 ```
+Luego tomamos el metodo (`POST`), el path parcial (`/apps/{app_id}/events`) y el `query_string` creado y lo firmamos con el metodo `sign` segun lo que pide Pusher.
 
+```python
+   def sign(self, content):
+        return hmac.new(self.secret, content, hashlib.sha256).hexdigest()
+```
+
+Luego al `query_string` le agregamos `auth_signature`, el cual tendra el valor de la data ya firmada y retornamos el nuevo `query_string` que sera usado para crear el nuevo path para usar con la API.
+
+El path quedaria algo asi:
+
+```
+https://api.pusherapp.com/apps/{app_id}/events?auth_key=278d425bdf160c739803&auth_timestamp=1353088179&auth_version=1.0&body_md5=ec365a775a4cd0599faeb73354201b6f&auth_signature=da454824c97ba181a32ccc17a72625ba02771f50b50e1e7430e47a1f3f457e6c
+```
+
+Y con esto ya puedes enviar un evento con data.
 
 
 
