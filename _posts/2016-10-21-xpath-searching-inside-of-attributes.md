@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Xpath - searching inside of attributes
+title: '[Xpath] - searching inside of attributes'
+published: true
 ---
 
 
