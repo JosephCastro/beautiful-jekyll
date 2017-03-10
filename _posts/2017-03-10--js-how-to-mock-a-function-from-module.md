@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: '[JS] How to mock a function from module'
 ---
 If you have something like:
