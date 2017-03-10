@@ -42,7 +42,7 @@ module.myFunction2(...);
 
 But for me still I get the initial function `myFunction`.
 
-So I try to use [`rewire`](https://github.com/jhnns/rewire)
+So I try to use [rewire](https://github.com/jhnns/rewire)
 from the repo:
 ```
 rewire acts exactly like require. With just one difference: Your module will now export a special setter and getter for private variables.
